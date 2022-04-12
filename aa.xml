@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<scene version="2.0.0">
+<integrator name="integrator" type="direct">
+<boolean name="hide_emitters" value="false"/>
+</integrator>
+<sensor type="perspective">
+<float name="far_clip" value="100.0"/>
+<float name="focus_distance" value="23.4563"/>
+<float name="fov" value="20.3117"/>
+<string name="fov_axis" value="x"/>
+<float name="near_clip" value="0.1"/>
+<transform name="to_world">
+<lookat origin="11.4325, 21.8848, 1.72842" target="11.4672, 20.9288, 2.01965" up="-0.00128896, -0.291446, -0.956587"/>
+</transform>
+<sampler type="ldsampler">
+<integer name="sample_count" value="256"/>
+</sampler>
+<film type="ldrfilm">
+<boolean name="banner" value="true"/>
+<float name="exposure" value="0.0"/>
+<string name="fileFormat" value="png"/>
+<boolean name="fitHorizontal" value="true"/>
+<float name="gamma" value="-1"/>
+<integer name="height" value="64"/>
+<boolean name="high_qualityEdges" value="false"/>
+<string name="label[-10,-10]" value=""/>
+<float name="pixel_aspectX" value="1"/>
+<float name="pixel_aspectY" value="1"/>
+<string name="pixel_format" value="rgb"/>
+<float name="shiftX" value="0"/>
+<float name="shiftY" value="0"/>
+<string name="tonemap_method" value="gamma"/>
+<integer name="width" value="64"/>
+<rfilter type="gaussian">
+<float name="stddev" value="0.5"/>
+</rfilter>
+</film>
+</sensor>
+<bsdf id="diffuse.003-bl_mat-bsdf" type="diffuse">
+<rgb name="reflectance" value="0.288298, 0.288298, 0.288298"/>
+</bsdf>
+<shape id="bunny.003_bunny.003_0000_m000_0.000000" type="serialized">
+<transform name="to_world">
+<matrix value="1.962585 0.000000 0.385044 12.443063 0.000000 2.000000 -0.000000 -5.115613 -0.385044 0.000000 1.962585 10.234327 0.000000 0.000000 0.000000 1.000000"/>
+</transform>
+<ref name="bsdf" id="diffuse.003-bl_mat-bsdf"/>
+<string name="filename" value="./bunny_003_0000_m000_0_000000.serialized"/>
+</shape>
+<emitter type="envmap">
+<transform name="to_world">
+<matrix value="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1"/>
+<rotate y="1" angle="0"/>
+</transform>
+<rgb name="irradiance" value="1.000000 1.000000 1.000000"/>
+<float name="scale" value="1"/>
+<string name="filename" value="../example/test/20141030082626_flip0_expo-1.jpg"/>
+</emitter>
+<bsdf id="diffuse_ground.003-bl_mat-bsdf" type="diffuse">
+<rgb name="reflectance" value="0.114435 0.097587 0.082283"/>
+</bsdf>
+<shape id="Plane.003_Plane.003_0000_m000_0.000000" type="serialized">
+<transform name="to_world">
+<matrix value="7.000000 0.000000 0.000000 12.565207 0.000000 0.000000 11.000000 -6.645764 0.000000 -14.150000 0.000000 3.963688 0.000000 0.000000 0.000000 1.000000"/>
+</transform>
+<ref name="bsdf" id="diffuse_ground.003-bl_mat-bsdf"/>
+<string name="filename" value="./Plane_003_0000_m000_0_000000.serialized"/>
+</shape>
+</scene>
